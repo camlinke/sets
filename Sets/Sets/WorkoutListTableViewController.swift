@@ -24,10 +24,12 @@ class WorkoutListTableViewController: UITableViewController{
         
         // Setup Navigation Bar
         let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 64))
-        navigationBar.backgroundColor = UIColor(red: 113, green: 46, blue: 89, alpha: 1.0)
+        navigationBar.barTintColor = UIColor(red: 133/255.0, green: 226/255.0, blue: 121/255.0, alpha: 1.0)
+        navigationBar.translucent = false
+        navigationBar.opaque = false
         
         let navigationItem = UINavigationItem()
-        navigationItem.title = "Title"
+        navigationItem.title = "Select Workout"
         navigationBar.items = [navigationItem]
         
         self.view.addSubview(navigationBar)
