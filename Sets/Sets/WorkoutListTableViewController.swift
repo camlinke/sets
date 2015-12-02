@@ -23,16 +23,19 @@ class WorkoutListTableViewController: UITableViewController{
         tableView.estimatedRowHeight = 76
         
         // Setup Navigation Bar
-        let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 64))
-        navigationBar.barTintColor = UIColor(red: 133/255.0, green: 226/255.0, blue: 121/255.0, alpha: 1.0)
-        navigationBar.translucent = false
-        navigationBar.opaque = false
-        
-        let navigationItem = UINavigationItem()
-        navigationItem.title = "Select Workout"
-        navigationBar.items = [navigationItem]
-        
-        self.view.addSubview(navigationBar)
+//        let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 64))
+//        navigationBar.barTintColor = UIColor(red: 133/255.0, green: 226/255.0, blue: 121/255.0, alpha: 1.0)
+//        navigationBar.translucent = false
+//        navigationBar.opaque = false
+//        
+//        let navigationItem = UINavigationItem()
+//        navigationItem.title = "Select Workout"
+//        navigationBar.items = [navigationItem]
+//        
+//        self.view.addSubview(navigationBar)
+        self.navigationItem.title = "Workouts"
+        self.view.backgroundColor = UIColor(red: 133/255.0, green: 226/255.0, blue: 121/255.0, alpha: 1.0)
+        self.view.opaque = false
         
         self.tableView.registerClass(WorkoutListTableViewCell.self, forCellReuseIdentifier: "WorkoutListCell")
         
