@@ -34,8 +34,6 @@ class WorkoutListTableViewController: UITableViewController{
 //        
 //        self.view.addSubview(navigationBar)
         self.navigationItem.title = "Workouts"
-        self.view.backgroundColor = UIColor(red: 133/255.0, green: 226/255.0, blue: 121/255.0, alpha: 1.0)
-        self.view.opaque = false
         
         self.tableView.registerClass(WorkoutListTableViewCell.self, forCellReuseIdentifier: "WorkoutListCell")
         
