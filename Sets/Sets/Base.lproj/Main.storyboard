@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MOs-bl-GT0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="129-2q-9Cz">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -19,11 +19,59 @@
                             <outlet property="delegate" destination="JSU-dC-QZZ" id="vEv-7o-yXb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="S8m-be-Wzx"/>
+                    <navigationItem key="navigationItem" id="S8m-be-Wzx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bZe-Ql-2JD">
+                            <connections>
+                                <segue destination="tCL-eG-3Wn" kind="show" id="cfp-8P-53H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="129-2q-9Cz" kind="presentation" identifier="toWorkoutViewControllerSegue" id="Bdx-rx-8Ah"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfa-cZ-E3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2021" y="464"/>
+        </scene>
+        <!--Edit Workout Table View Controller-->
+        <scene sceneID="K9c-iP-0nY">
+            <objects>
+                <tableViewController id="tCL-eG-3Wn" customClass="EditWorkoutTableViewController" customModule="Sets" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="FPc-Zo-hYu">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="tCL-eG-3Wn" id="Qv9-Vw-f7X"/>
+                            <outlet property="delegate" destination="tCL-eG-3Wn" id="AZ2-M5-Lyn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Znr-1l-iEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2808" y="106"/>
+        </scene>
+        <!--Workout View Controller-->
+        <scene sceneID="V64-NC-xJr">
+            <objects>
+                <viewController id="129-2q-9Cz" customClass="WorkoutViewController" customModule="Sets" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eZM-cX-Ehx"/>
+                        <viewControllerLayoutGuide type="bottom" id="rOc-gL-CCC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gBb-0m-ZMG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cC5-HL-1bW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2808" y="828"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vGS-gZ-ZC9">

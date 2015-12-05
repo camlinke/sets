@@ -15,14 +15,14 @@ class WorkoutListTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        workoutName = UILabel(frame: CGRect(x: self.frame.size.width * 0.05,
+        self.workoutName = UILabel(frame: CGRect(x: self.frame.size.width * 0.05,
                                             y: (self.frame.size.height + 5) / 2,
                                         width: self.frame.size.width * 0.72,
                                         height: 27))
 //        workoutName.backgroundColor = UIColor.redColor()
-        workoutName.font = UIFont.systemFontOfSize(27, weight: UIFontWeightLight)
-        workoutName.text = "Upper Body Day 1"
-        contentView.addSubview(workoutName)
+        self.workoutName.font = UIFont.systemFontOfSize(27, weight: UIFontWeightLight)
+        self.workoutName.text = "Upper Body Day 1"
+        self.contentView.addSubview(workoutName)
         
     }
     

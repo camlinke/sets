@@ -1,15 +1,14 @@
 //
-//  WorkoutListTableViewController.swift
+//  EditWorkoutTableViewController.swift
 //  Sets
 //
-//  Created by Cam Linke on 2015-11-28.
+//  Created by Cam Linke on 2015-12-05.
 //  Copyright © 2015 camlinke. All rights reserved.
 //
 
 import UIKit
 
-class WorkoutListTableViewController: UITableViewController{
-    
+class EditWorkoutTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +18,13 @@ class WorkoutListTableViewController: UITableViewController{
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
         tableView.rowHeight = 76
         tableView.estimatedRowHeight = 76
         
         self.navigationItem.title = "Workouts"
         
-        self.tableView.registerClass(WorkoutListTableViewCell.self, forCellReuseIdentifier: "WorkoutListCell")
-        
+        self.tableView.registerClass(EditWorkoutTableViewCell.self, forCellReuseIdentifier: "EditWorkoutCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,21 +40,17 @@ class WorkoutListTableViewController: UITableViewController{
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        // #warning Incomplete implementation, return the number of rows
+        return 2
     }
 
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("WorkoutListCell") as! WorkoutListTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("EditWorkoutCell") as! EditWorkoutTableViewCell
         
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        cell.accessoryType = UITableViewCellAccessoryType.DetailDisclosureButton
         
         return cell
-    }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("toWorkoutViewControllerSegue", sender: nil)
-        print("\(indexPath.row)")
     }
 
     /*

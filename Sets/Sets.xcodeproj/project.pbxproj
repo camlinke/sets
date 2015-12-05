@@ -15,6 +15,9 @@
 		8F0470041C0AA0980054C1F6 /* SetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0470031C0AA0980054C1F6 /* SetsUITests.swift */; };
 		8F0470121C0AA3E60054C1F6 /* WorkoutListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0470111C0AA3E60054C1F6 /* WorkoutListTableViewController.swift */; };
 		8F0470141C0AABFB0054C1F6 /* WorkoutListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0470131C0AABFB0054C1F6 /* WorkoutListTableViewCell.swift */; };
+		8F0470161C1361150054C1F6 /* EditWorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0470151C1361150054C1F6 /* EditWorkoutTableViewController.swift */; };
+		8F0470181C1364BD0054C1F6 /* EditWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0470171C1364BD0054C1F6 /* EditWorkoutTableViewCell.swift */; };
+		8F04701A1C136AB70054C1F6 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0470191C136AB70054C1F6 /* WorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		8F0470051C0AA0980054C1F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F0470111C0AA3E60054C1F6 /* WorkoutListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutListTableViewController.swift; sourceTree = "<group>"; };
 		8F0470131C0AABFB0054C1F6 /* WorkoutListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutListTableViewCell.swift; sourceTree = "<group>"; };
+		8F0470151C1361150054C1F6 /* EditWorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWorkoutTableViewController.swift; sourceTree = "<group>"; };
+		8F0470171C1364BD0054C1F6 /* EditWorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		8F0470191C136AB70054C1F6 /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				8F046FE31C0AA0980054C1F6 /* AppDelegate.swift */,
+				8F0470191C136AB70054C1F6 /* WorkoutViewController.swift */,
 				8F0470111C0AA3E60054C1F6 /* WorkoutListTableViewController.swift */,
 				8F0470131C0AABFB0054C1F6 /* WorkoutListTableViewCell.swift */,
+				8F0470151C1361150054C1F6 /* EditWorkoutTableViewController.swift */,
+				8F0470171C1364BD0054C1F6 /* EditWorkoutTableViewCell.swift */,
 				8F046FE71C0AA0980054C1F6 /* Main.storyboard */,
 				8F046FEA1C0AA0980054C1F6 /* Assets.xcassets */,
 				8F046FEC1C0AA0980054C1F6 /* LaunchScreen.storyboard */,
@@ -260,9 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F04701A1C136AB70054C1F6 /* WorkoutViewController.swift in Sources */,
 				8F046FE41C0AA0980054C1F6 /* AppDelegate.swift in Sources */,
+				8F0470181C1364BD0054C1F6 /* EditWorkoutTableViewCell.swift in Sources */,
 				8F0470121C0AA3E60054C1F6 /* WorkoutListTableViewController.swift in Sources */,
 				8F0470141C0AABFB0054C1F6 /* WorkoutListTableViewCell.swift in Sources */,
+				8F0470161C1361150054C1F6 /* EditWorkoutTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
