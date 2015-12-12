@@ -18,6 +18,10 @@
 		8F0470161C1361150054C1F6 /* EditWorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0470151C1361150054C1F6 /* EditWorkoutTableViewController.swift */; };
 		8F0470181C1364BD0054C1F6 /* EditWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0470171C1364BD0054C1F6 /* EditWorkoutTableViewCell.swift */; };
 		8F04701A1C136AB70054C1F6 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0470191C136AB70054C1F6 /* WorkoutViewController.swift */; };
+		8F04701D1C1BCBE00054C1F6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F04701B1C1BCBE00054C1F6 /* Realm.framework */; };
+		8F04701E1C1BCBE00054C1F6 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F04701B1C1BCBE00054C1F6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F04701F1C1BCBE00054C1F6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F04701C1C1BCBE00054C1F6 /* RealmSwift.framework */; };
+		8F0470201C1BCBE00054C1F6 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F04701C1C1BCBE00054C1F6 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8F0470211C1BCBE00054C1F6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8F0470201C1BCBE00054C1F6 /* RealmSwift.framework in Embed Frameworks */,
+				8F04701E1C1BCBE00054C1F6 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8F046FE01C0AA0980054C1F6 /* Sets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F046FE31C0AA0980054C1F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +74,8 @@
 		8F0470151C1361150054C1F6 /* EditWorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWorkoutTableViewController.swift; sourceTree = "<group>"; };
 		8F0470171C1364BD0054C1F6 /* EditWorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		8F0470191C136AB70054C1F6 /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		8F04701B1C1BCBE00054C1F6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		8F04701C1C1BCBE00054C1F6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F04701F1C1BCBE00054C1F6 /* RealmSwift.framework in Frameworks */,
+				8F04701D1C1BCBE00054C1F6 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +108,8 @@
 		8F046FD71C0AA0980054C1F6 = {
 			isa = PBXGroup;
 			children = (
+				8F04701B1C1BCBE00054C1F6 /* Realm.framework */,
+				8F04701C1C1BCBE00054C1F6 /* RealmSwift.framework */,
 				8F046FE21C0AA0980054C1F6 /* Sets */,
 				8F046FF71C0AA0980054C1F6 /* SetsTests */,
 				8F0470021C0AA0980054C1F6 /* SetsUITests */,
@@ -147,6 +172,8 @@
 				8F046FDC1C0AA0980054C1F6 /* Sources */,
 				8F046FDD1C0AA0980054C1F6 /* Frameworks */,
 				8F046FDE1C0AA0980054C1F6 /* Resources */,
+				8F0470211C1BCBE00054C1F6 /* Embed Frameworks */,
+				8F0470221C1BCCB40054C1F6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -263,6 +290,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F0470221C1BCCB40054C1F6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F046FDC1C0AA0980054C1F6 /* Sources */ = {
@@ -416,6 +459,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Sets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.camlinke.Sets;
@@ -430,6 +477,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Sets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.camlinke.Sets;
