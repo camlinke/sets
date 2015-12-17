@@ -24,7 +24,7 @@ class WorkoutListTableViewController: UITableViewController{
         
         // Get list of workouts from realm
         let workouts = realm.objects(Workout)
-//        print(workouts)
+        print(workouts)
         
         tableView.rowHeight = 76
         tableView.estimatedRowHeight = 76
