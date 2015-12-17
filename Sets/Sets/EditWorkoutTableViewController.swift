@@ -36,21 +36,45 @@ class EditWorkoutTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return 1
     }
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("EditWorkoutCell") as! EditWorkoutTableViewCell
         
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        if indexPath.section == 0 {
+            let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
+            cell.textLabel?.text = "FOOBAR"
+            
+            return cell
+        }
         
-        return cell
+        else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("EditWorkoutCell") as! EditWorkoutTableViewCell
+            
+            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            
+            return cell
+        }
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Name"
+        }
+        return "Exercises"
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 {
+            performSegueWithIdentifier("toEditWorkoutNameSegue", sender: nil)
+        }
+        //toEditExerciseSegue
     }
 
     /*

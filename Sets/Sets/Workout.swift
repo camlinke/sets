@@ -21,6 +21,6 @@ class Workout: Object {
 //    return []
 //  }
     
-    dynamic var name = ""
+    dynamic var name = "New Workout"
     let sets = List<Set>()
 }

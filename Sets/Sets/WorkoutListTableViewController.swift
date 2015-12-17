@@ -9,9 +9,14 @@
 import UIKit
 import RealmSwift
 
+
 class WorkoutListTableViewController: UITableViewController{
     
     let realm = try! Realm()
+    
+    lazy var workouts: Results<Workout> = {
+        self.realm.objects(Workout)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +28,6 @@ class WorkoutListTableViewController: UITableViewController{
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         // Get list of workouts from realm
-        let workouts = realm.objects(Workout)
         print(workouts)
         
         tableView.rowHeight = 76
@@ -48,7 +52,7 @@ class WorkoutListTableViewController: UITableViewController{
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return workouts.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Workout List Table View Controller-->
@@ -47,10 +48,77 @@
                             <outlet property="delegate" destination="tCL-eG-3Wn" id="AZ2-M5-Lyn"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="TPB-P7-Pc7" kind="show" identifier="toEditExerciseSegue" id="fDn-Je-JuE"/>
+                        <segue destination="MRp-vj-lcI" kind="show" identifier="toEditWorkoutNameSegue" id="prV-T3-hha"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Znr-1l-iEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2808" y="106"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="YkG-7i-jyn">
+            <objects>
+                <tableViewController id="MRp-vj-lcI" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="M87-bt-0o3">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="kPg-PA-SGS">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="vvy-kk-RKZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vvy-kk-RKZ" id="XTS-qW-IYL">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter workout name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dma-io-2d2">
+                                                    <rect key="frame" x="8" y="8" width="584" height="53"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dma-io-2d2" firstAttribute="bottom" secondItem="XTS-qW-IYL" secondAttribute="bottomMargin" id="6SG-xO-0Og"/>
+                                                <constraint firstItem="dma-io-2d2" firstAttribute="top" secondItem="XTS-qW-IYL" secondAttribute="topMargin" id="Wga-ZX-sX8"/>
+                                                <constraint firstItem="dma-io-2d2" firstAttribute="leading" secondItem="XTS-qW-IYL" secondAttribute="leadingMargin" id="jyi-xW-FIh"/>
+                                                <constraint firstItem="dma-io-2d2" firstAttribute="trailing" secondItem="XTS-qW-IYL" secondAttribute="trailingMargin" id="vnT-VH-mKP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="MRp-vj-lcI" id="9eS-A7-vpk"/>
+                            <outlet property="delegate" destination="MRp-vj-lcI" id="vPN-Oe-wnH"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fou-zI-ouV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3608" y="-212"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UKL-Q2-EPU">
+            <objects>
+                <viewController id="TPB-P7-Pc7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w98-ho-APh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ht8-iB-UhE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0uF-AD-9yy">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwC-ca-8LD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3608" y="504"/>
         </scene>
         <!--Workout View Controller-->
         <scene sceneID="V64-NC-xJr">
