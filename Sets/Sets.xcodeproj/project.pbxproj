@@ -22,6 +22,9 @@
 		8F04701E1C1BCBE00054C1F6 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F04701B1C1BCBE00054C1F6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F04701F1C1BCBE00054C1F6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F04701C1C1BCBE00054C1F6 /* RealmSwift.framework */; };
 		8F0470201C1BCBE00054C1F6 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F04701C1C1BCBE00054C1F6 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F2CA9F71C1BCFB50045E240 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2CA9F61C1BCFB50045E240 /* Exercise.swift */; };
+		8F2CA9F91C1BD1AB0045E240 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2CA9F81C1BD1AB0045E240 /* Workout.swift */; };
+		8FE4635B1C2254CF00DB84EB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE4635A1C2254CF00DB84EB /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,9 @@
 		8F0470191C136AB70054C1F6 /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		8F04701B1C1BCBE00054C1F6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		8F04701C1C1BCBE00054C1F6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		8F2CA9F61C1BCFB50045E240 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		8F2CA9F81C1BD1AB0045E240 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		8FE4635A1C2254CF00DB84EB /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,9 @@
 				8F046FEA1C0AA0980054C1F6 /* Assets.xcassets */,
 				8F046FEC1C0AA0980054C1F6 /* LaunchScreen.storyboard */,
 				8F046FEF1C0AA0980054C1F6 /* Info.plist */,
+				8F2CA9F61C1BCFB50045E240 /* Exercise.swift */,
+				8F2CA9F81C1BD1AB0045E240 /* Workout.swift */,
+				8FE4635A1C2254CF00DB84EB /* Result.swift */,
 			);
 			path = Sets;
 			sourceTree = "<group>";
@@ -312,11 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE4635B1C2254CF00DB84EB /* Result.swift in Sources */,
 				8F04701A1C136AB70054C1F6 /* WorkoutViewController.swift in Sources */,
 				8F046FE41C0AA0980054C1F6 /* AppDelegate.swift in Sources */,
 				8F0470181C1364BD0054C1F6 /* EditWorkoutTableViewCell.swift in Sources */,
+				8F2CA9F91C1BD1AB0045E240 /* Workout.swift in Sources */,
 				8F0470121C0AA3E60054C1F6 /* WorkoutListTableViewController.swift in Sources */,
 				8F0470141C0AABFB0054C1F6 /* WorkoutListTableViewCell.swift in Sources */,
+				8F2CA9F71C1BCFB50045E240 /* Exercise.swift in Sources */,
 				8F0470161C1361150054C1F6 /* EditWorkoutTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
