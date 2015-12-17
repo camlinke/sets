@@ -9,6 +9,15 @@
 import Foundation
 import RealmSwift
 
+class ListedExercise: Object {
+    dynamic var name = ""
+    dynamic var datetime = NSDate().timeIntervalSince1970
+    dynamic var reps = ""
+    dynamic var weight = ""
+    dynamic var repUnit = ""
+    dynamic var weightUnit = ""
+}
+
 class Result: Object {
     
 // Specify properties to ignore (Realm won't persist these)
@@ -18,6 +27,6 @@ class Result: Object {
 //  }
     dynamic var workoutName = ""
     dynamic var datetime = NSDate().timeIntervalSince1970
-    dynamic var exerciseArray = [Dictionary<String, String>]()
-    dynamic var previousExerciseArray = [Dictionary<String, String>]()
+    let exerciseArray = List<ListedExercise>()
+    let previousExerciseArray = List<ListedExercise>()
 }

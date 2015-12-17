@@ -9,6 +9,10 @@
 import Foundation
 import RealmSwift
 
+class Set: Object {
+    let set = List<Exercise>()
+}
+
 class Workout: Object {
     
 // Specify properties to ignore (Realm won't persist these)
@@ -18,5 +22,5 @@ class Workout: Object {
 //  }
     
     dynamic var name = ""
-    dynamic var sets = Array<Array<Exercise>>()
+    let sets = List<Set>()
 }

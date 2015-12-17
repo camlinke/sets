@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class WorkoutListTableViewController: UITableViewController{
     
-
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +21,11 @@ class WorkoutListTableViewController: UITableViewController{
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // Get list of workouts from realm
+        let workouts = realm.objects(Workout)
+//        print(workouts)
+        
         tableView.rowHeight = 76
         tableView.estimatedRowHeight = 76
         
